@@ -1,0 +1,51 @@
+@use '../abstracts';
+
+body {
+    background: abstracts.$ivory;
+}
+
+#container {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 1100px) {
+        width: 900px;
+    }
+
+    @media (max-width: 950px) {
+        width: 768px;
+    }
+
+    @media (max-width: 800px) {
+        width: 600px;
+        padding: unset;
+    }
+
+    @media (max-width: 650px) {
+        width: 100%;
+        padding: unset;
+    }
+
+    ul, ol {
+        list-style-position: inside;
+    }
+
+    ul {
+        list-style-type: '\002B57';
+    }
+
+    ul li span {
+        padding-left: 10px;
+    }
+
+    
+    ol li span {
+        padding-left: 5px;
+    }
+
+    ol li::marker {
+        font-weight: bold;
+    }
+
+}

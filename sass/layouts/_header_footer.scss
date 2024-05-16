@@ -1,0 +1,61 @@
+@use '../abstracts';
+
+header, footer {
+    width: 100%;
+    background: abstracts.$whitesmoke;
+}
+
+header div, footer div {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 1100px) {
+        width: 900px;
+    }
+
+    @media (max-width: 950px) {
+        width: 768px;
+    }
+
+    @media (max-width: 800px) {
+        width: 600px;
+        padding: 20px unset;
+    }
+
+    @media (max-width: 650px) {
+        width: 100%;
+        padding: 20px unset;
+    }
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 80px;
+}
+
+header div .site-title {
+    font-weight: 600;
+    font-size: 4rem;
+    flex: 60%;
+
+    @media (max-width: 650px) {
+        font-size: 3rem;
+    }
+}
+
+header {
+    a {
+        font-weight: unset;
+    }
+}
+
+header div .divide-line {
+    background: #000;
+    margin-right: 10px;
+    display: list-item;
+}
