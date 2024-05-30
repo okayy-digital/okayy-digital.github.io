@@ -5,6 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/site.min.css?t=&lt;%= DateTime.Now.Ticks %">
     <title>Rosmine | Fashion/Model</title>
+    
+       <script>
+var array = [
+
+        '/media/lc1fncw3/gettyimages-1684490670-6506e83e7d220.jpg',
+        
+        '/media/vbxpezaq/ace859b1a541086e7e54a6d1b397baf8.jpg',
+        
+        '/media/hecnhtgi/gettyimages-147552552-1024x1024.jpg',
+        
+        '/media/opjf3phx/tumblr_lilmgrvwiy1qh5n07o1_1280.png',
+        
+        '/media/mt2bjecp/mowalolass2023038-a8456da8.webp',
+        
+        '/media/yeabaksk/gettyimages-1669100669-6506e6542c5a1.jpg',
+        
+        '/media/3mpapmo5/b3370fbddd452f6285c63dfeff804e34.jpg',
+        
+        '/media/2eybp3fm/af9jrwuogzpauyajzygq.jpg',
+        
+        '/media/ntehqtq5/00030-mowalola-spring-2023-menswear-credit-gorunway.webp',
+        
+        '/media/bbbffhs1/1135832.jpg',
+        
+        '/media/ucdge1ph/01-cdg-models.webp',
+        
+        '/media/ltfktosl/kiko-kostadinov-2019-2020-fall-winter-womens-runway-london-fashion-week-troll-doll-knit-velvet-gauntlet-denim-jeans-observer-05.jpg',
+        
+        '/media/54hjbpka/ann_demeulemeester_ss24_womenswear_041width-640_uyp9pwtrdhchcvr3.jpg',
+        
+        '/media/qjljdho0/system-20-junya-watanabe-14-400x.jpg',
+        ];
+function shuffle(array) {
+  var currentIndex = array.length;
+  var temporaryValue;
+  var randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+</script>  
 </head>
 <body>
     <header>
@@ -50,68 +96,26 @@
   </div>
   <script>
 
-var array = [
+     var shuffled_images = shuffle(array);
+ var images = shuffle(array);
+ for(var i=0;i<array.length;i++) {
+   document.getElementById('image-' + (i+1)).src = shuffled_images[i];
+ }
+     // Function to update height and width
+     function updateSize() {
+        setTimeout(function() {
+         let getGalleryHeight = document.getElementById("gallery-container").clientHeight + "px";
+         console.log(getGalleryHeight);
+         document.getElementById("set-height").style.height = getGalleryHeight;
+        }, 1500);
+     }
 
-        '/media/lc1fncw3/gettyimages-1684490670-6506e83e7d220.jpg',
-        
-        '/media/vbxpezaq/ace859b1a541086e7e54a6d1b397baf8.jpg',
-        
-        '/media/hecnhtgi/gettyimages-147552552-1024x1024.jpg',
-        
-        '/media/opjf3phx/tumblr_lilmgrvwiy1qh5n07o1_1280.png',
-        
-        '/media/mt2bjecp/mowalolass2023038-a8456da8.webp',
-        
-        '/media/yeabaksk/gettyimages-1669100669-6506e6542c5a1.jpg',
-        
-        '/media/3mpapmo5/b3370fbddd452f6285c63dfeff804e34.jpg',
-        
-        '/media/2eybp3fm/af9jrwuogzpauyajzygq.jpg',
-        
-        '/media/ntehqtq5/00030-mowalola-spring-2023-menswear-credit-gorunway.webp',
-        
-        '/media/bbbffhs1/1135832.jpg',
-        
-        '/media/ucdge1ph/01-cdg-models.webp',
-        
-        '/media/ltfktosl/kiko-kostadinov-2019-2020-fall-winter-womens-runway-london-fashion-week-troll-doll-knit-velvet-gauntlet-denim-jeans-observer-05.jpg',
-        
-        '/media/54hjbpka/ann_demeulemeester_ss24_womenswear_041width-640_uyp9pwtrdhchcvr3.jpg',
-        
-        '/media/qjljdho0/system-20-junya-watanabe-14-400x.jpg',
-        ];
-function shuffle(array) {
-  var currentIndex = array.length;
-  var temporaryValue;
-  var randomIndex;
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
-var shuffled_images = shuffle(array);
-var images = shuffle(array);
-for(var i=0;i<array.length;i++) {
-  document.getElementById('image-' + (i+1)).src = shuffled_images[i];
-}
- 
-    // Function to update height and width
-    function updateSize() {
-      let getGalleryHeight = document.getElementById("gallery-container").clientHeight + "px";
-      console.log(getGalleryHeight);
-      document.getElementById("set-height").style.height = getGalleryHeight;
-    }
- 
-    // Add event listener for window resize
-    window.addEventListener('resize', updateSize);
- 
-    // Initial update
-    updateSize();
-</script>
+     // Add event listener for window resize
+     window.addEventListener('resize', updateSize);
+
+     // Initial update
+     updateSize();
+    </script>
 <script src="/scripts/image-gallery.js"></script>
 <script src="/scripts/rellax.min.js"></script>
 <script>
