@@ -1,0 +1,462 @@
+﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+.pagination-nav,
+.story-container,
+.post-container, header, footer {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background: #FFFAFA;
+}
+
+#container {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 1125px) {
+  #container {
+    width: 900px;
+  }
+}
+@media (max-width: 950px) {
+  #container {
+    width: 768px;
+  }
+}
+@media (max-width: 800px) {
+  #container {
+    width: 600px;
+    padding: unset;
+  }
+}
+@media (max-width: 650px) {
+  #container {
+    width: 95%;
+  }
+}
+#container ul, #container ol {
+  list-style-position: inside;
+}
+#container ul {
+  list-style-type: "☉";
+}
+#container ul li span {
+  padding-left: 10px;
+}
+#container ol li span {
+  padding-left: 5px;
+}
+#container ol li::marker {
+  font-weight: bold;
+}
+#container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#container .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+#container .image-container .image-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (min-width: 786px) {
+  #container .image-container .image-item {
+    flex-grow: 1;
+    width: 33%;
+    margin-bottom: unset;
+  }
+  #container .image-container .image-item img {
+    width: 95%;
+  }
+}
+#container #headline-image {
+  margin-top: 20px;
+  padding: 0 100px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, input[type=submit], input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input {
+  all: unset;
+}
+
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+html, body {
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+#container p, #container li {
+  font-size: 1.1em;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+mark {
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  color: #000;
+  font-weight: 600;
+  text-decoration-color: transparent;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: all 0.7s ease;
+}
+
+header, footer {
+  width: 100%;
+  background: #FFFAFA;
+}
+
+header div, footer div {
+  width: 1100px;
+  margin: 40px auto 0 auto;
+  padding: 20px;
+}
+@media (max-width: 1125px) {
+  header div, footer div {
+    width: 900px;
+  }
+}
+@media (max-width: 950px) {
+  header div, footer div {
+    width: 768px;
+  }
+}
+@media (max-width: 800px) {
+  header div, footer div {
+    width: 600px;
+    padding: 20px 0;
+  }
+}
+@media (max-width: 650px) {
+  header div, footer div {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 80px;
+}
+
+header div .site-title {
+  font-weight: 600;
+  font-size: 4rem;
+  flex: 60%;
+  text-decoration: none;
+}
+@media (max-width: 650px) {
+  header div .site-title {
+    font-size: 3rem;
+    margin-left: 20px;
+  }
+}
+
+header a {
+  font-weight: unset;
+}
+header a:hover {
+  text-decoration-thickness: 2px;
+}
+@media (max-width: 650px) {
+  header nav {
+    margin-right: 20px;
+  }
+}
+
+header div .divide-line {
+  background: #000;
+  margin-right: 10px;
+  display: list-item;
+}
+
+.container {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+#gallery-container > img {
+  width: 100%;
+}
+@media (min-width: 786px) {
+  #gallery-container > img {
+    flex-grow: 1;
+    width: 33%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+.bricks {
+  display: block;
+}
+
+.brick {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 110vh;
+}
+
+.brick__image {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, 0%);
+  max-width: 400px;
+}
+
+#trigger {
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.pagination-nav .search-nav-container {
+  display: flex;
+  align-items: center;
+}
+.pagination-nav .search-nav-container input[type=search] {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  width: 40%;
+}
+.pagination-nav .search-nav-container i {
+  margin: 0 10px 5px 5px;
+  cursor: pointer;
+}
+.pagination-nav .search-nav-container i::before {
+  width: 20px;
+  height: 20px;
+}
+
+#stories-nav,
+#posts-nav {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+}
+#stories-nav .page-btn,
+#stories-nav .post-page-btn,
+#stories-nav .btn-arrows,
+#posts-nav .page-btn,
+#posts-nav .post-page-btn,
+#posts-nav .btn-arrows {
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+}
+#stories-nav .active,
+#stories-nav .page-btn:hover,
+#stories-nav .post-page-btn:hover,
+#stories-nav .btn-arrows:hover,
+#posts-nav .active,
+#posts-nav .page-btn:hover,
+#posts-nav .post-page-btn:hover,
+#posts-nav .btn-arrows:hover {
+  border: 2px solid black;
+  transition: all 0.7s ease;
+}
+#stories-nav .btn-arrows:first-child,
+#posts-nav .btn-arrows:first-child {
+  background: url("/img/chevron-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#stories-nav .btn-arrows:last-child,
+#posts-nav .btn-arrows:last-child {
+  background: url("/img/chevron-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.story-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  align-items: center;
+}
+@media (min-width: 786px) {
+  .story-container > a {
+    flex-grow: 1;
+    width: 33%;
+    height: 100%;
+    padding: 30px;
+    border: 3px solid transparent;
+  }
+}
+@media (max-width: 786px) {
+  .story-container > a {
+    margin-bottom: 20px;
+  }
+}
+.story-container > a img {
+  margin-bottom: 20px;
+  height: 450px;
+  object-fit: contain;
+}
+.story-container > a h3 {
+  margin: unset;
+  text-align: center;
+}
+@media (min-width: 786px) {
+  .story-container a:hover {
+    border: 3px solid;
+  }
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.post-container a {
+  padding: 20px;
+  border: 3px solid transparent;
+}
+.post-container a:hover {
+  border: 3px solid;
+}
+.post-container span {
+  float: right;
+}
